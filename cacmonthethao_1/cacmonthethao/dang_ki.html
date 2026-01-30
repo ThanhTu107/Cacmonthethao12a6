@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Đăng Ký Tham Gia - THPT Vĩnh Trạch</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+		body {
+			background-color: #f5f5f5;
+		}
+		
+		main {
+			max-width: 600px;
+			margin: 2rem auto;
+			padding: 0 1rem;
+		}
+		
+		.form-container {
+			background-color: white;
+			padding: 2rem;
+			border-radius: 10px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		}
+		
+		.form-container h2 {
+			color: #667eea;
+			text-align: center;
+			margin-bottom: 0.5rem;
+			font-size: 1.5rem;
+		}
+		
+		.form-container p {
+			text-align: center;
+			color: #666;
+			margin-bottom: 1.5rem;
+			font-size: 0.95rem;
+		}
+		
+		.form-container table {
+			width: 100%;
+			margin: 1rem 0;
+			box-shadow: none;
+		}
+		
+		.form-container table tr {
+			border-bottom: 1px solid #eee;
+		}
+		
+		.form-container table tr:last-child {
+			border-bottom: none;
+		}
+		
+		.form-container table td {
+			padding: 1rem;
+		}
+		
+		.form-container table td:first-child {
+			width: 40%;
+			font-weight: 500;
+			color: #555;
+		}
+		
+		.form-container input[type="text"],
+		.form-container input[type="email"],
+		.form-container input[type="date"],
+		.form-container input[type="file"],
+		.form-container textarea,
+		.form-container select {
+			width: 100%;
+			padding: 0.8rem;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			font-size: 1rem;
+			font-family: inherit;
+			transition: border-color 0.3s ease;
+		}
+		
+		.form-container input[type="text"]:focus,
+		.form-container input[type="email"]:focus,
+		.form-container input[type="date"]:focus,
+		.form-container input[type="file"]:focus,
+		.form-container textarea:focus,
+		.form-container select:focus {
+			outline: none;
+			border-color: #667eea;
+			box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+		}
+		
+		.form-container button {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 0.8rem 2rem;
+			border: none;
+			border-radius: 5px;
+			font-size: 1rem;
+			font-weight: bold;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			width: 100%;
+		}
+		
+		.form-container button:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+		}
+		
+		.back-link {
+			text-align: center;
+			margin-top: 1rem;
+		}
+		
+		.back-link a {
+			color: #667eea;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		
+		.back-link a:hover {
+			color: #764ba2;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<div class="banner">
+		<h1>Đăng Ký Tham Gia</h1>
+		<p>Trường THPT Vĩnh Trạch</p>
+	</div>
+	<nav class="tabs-nav">
+		<ul class="tabs-list">
+			<li><a href="index.html" class="tab-link">Trang chủ</a></li>
+			<li><a href="the_thao.html" class="tab-link">Chi tiết môn thể thao</a></li>
+			<li><a href="dang_ki.html" class="tab-link active">Đăng ký tham gia</a></li>
+			<li><a href="nghe_thuat.html" class="tab-link">CLB Nghệ thuật</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+	<form>
+		<div class="form-container">
+			<h2>Biểu Mẫu Đăng Ký</h2>
+			<p>Hãy điền đầy đủ thông tin để tham gia câu lạc bộ yêu thích</p>
+			
+			<table>
+				<tr>
+					<td><label for="hoten">Họ và tên:</label></td>
+					<td><input id="hoten" type="text" required></td>
+				</tr>
+				<tr>
+					<td><label for="email">Email:</label></td>
+					<td><input id="email" type="email" required></td>
+				</tr>
+				<tr>			
+					<td><label for="ngaysinh">Ngày sinh:</label></td>
+					<td><input id="ngaysinh" type="date" required></td>
+				</tr>
+				<tr>
+					<td><label>Giới tính:</label></td>
+					<td>
+						<input id="nam" type="radio" name="gioitinh" value="nam" required>
+						<label for="nam" style="display: inline; margin-right: 1rem; font-weight: normal;">Nam</label>
+						<input id="nu" type="radio" name="gioitinh" value="nu">
+						<label for="nu" style="display: inline; font-weight: normal;">Nữ</label>
+					</td>
+				</tr>
+				<tr>			
+					<td><label for="diachi">Địa chỉ:</label></td>
+					<td><textarea id="diachi" name="diachi" rows="3"></textarea></td>
+				</tr>
+				<tr>
+					<td><label for="dk">Chọn CLB:</label></td>
+					<td>
+						<select id="dk" name="dk" required>
+							<option value="">-- Chọn câu lạc bộ --</option>
+							<option value="">--- Thể thao ---</option>
+							<option value="bd">Bóng Đá</option>
+							<option value="bc">Bóng Chuyền</option>
+							<option value="br">Bóng Rổ</option>
+							<option value="bl">Bơi Lội</option>
+							<option value="vt">Võ Thuật</option>
+							<option value="">--- Nghệ Thuật ---</option>
+							<option value="an">Âm Nhạc</option>
+							<option value="mt">Mĩ Thuật</option>
+							<option value="na">Nhiếp Ảnh</option>
+							<option value="kv">Khiêu Vũ</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="kihoc">Kì học:</label></td>
+					<td>
+						<select id="kihoc" name="kihoc" required>
+							<option value="">-- Chọn kì học --</option>
+							<option value="ki1">Kì 1</option>
+							<option value="ki2">Kì 2</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button type="submit">Gửi Đăng Ký</button></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="back-link"><a href="index.html">← Quay lại trang chủ</a></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</main>
+
+<footer>
+	<div class="row">
+		<div>
+			<p>📞 Liên lạc</p>
+			<ul>
+				<li>Điện thoại: <strong>0987654321</strong></li>
+				<li><a href="index.html" class="link">Các Môn Thể Thao - THPT Vĩnh Trạch</a></li>
+				<li><a href="dang_ki.html" class="link">Biểu mẫu đăng ký</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>📝 Đăng ký</p>
+			<ul>
+				<li><a href="index.html" class="link">Trang chủ</a></li>
+				<li><a href="the_thao.html" class="link">Chi tiết các môn thể thao</a></li>
+				<li><a href="nghe_thuat.html" class="link">CLB Nghệ thuật</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>💡 Lợi ích</p>
+			<ul>
+				<li>Phát triển kỹ năng cá nhân</li>
+				<li>Gặp gỡ bạn bè đồng tâm</li>
+				<li>Nhận giải thưởng xuất sắc</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-divider"></div>
+	<div class="footer-bottom">
+		<p style="margin: 0; font-weight: normal;">© 2024-2026 Trường THPT Vĩnh Trạch. Tất cả các quyền được bảo lưu.</p>
+	</div>
+</footer>
+</body>
+</html>

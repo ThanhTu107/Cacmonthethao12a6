@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Các Môn Thể Thao - THPT Vĩnh Trạch</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+		main {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 2rem 1rem;
+		}
+		
+		.intro-section {
+			background-color: white;
+			padding: 3rem 2rem;
+			border-radius: 0;
+			margin-bottom: 2rem;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			text-align: center;
+		}
+		
+		.intro-section h2 {
+			color: #667eea;
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+		}
+		
+		.intro-section p {
+			color: #555;
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+		
+		.video-section {
+			background-color: white;
+			padding: 2rem;
+			border-radius: 8px;
+			margin-bottom: 2rem;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		}
+		
+		.video-section h2 {
+			color: #667eea;
+			font-size: 1.8rem;
+			margin-bottom: 1.5rem;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+		}
+		
+		.video-section h2::before {
+			content: "▶";
+			font-size: 1.5rem;
+		}
+		
+		.video-container {
+			max-width: 100%;
+			margin: 0 auto;
+			background-color: #000;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		}
+		
+		.video-container video {
+			width: 100%;
+			height: auto;
+			display: block;
+			max-height: 500px;
+		}
+		
+		.video-placeholder {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 3rem 2rem;
+			text-align: center;
+			font-size: 1.1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 300px;
+			gap: 1rem;
+		}
+		
+		.video-placeholder strong {
+			font-size: 1.3rem;
+			display: block;
+		}
+		
+		.video-section p {
+			text-align: center;
+			color: #666;
+			margin-top: 1rem;
+			font-size: 0.95rem;
+		}
+		
+		.sports-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 2rem;
+			margin-top: 3rem;
+		}
+		
+		.sport-card {
+			background: white;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			transition: all 0.3s ease;
+		}
+		
+		.sport-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+		}
+		
+		.sport-card img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+		
+		.sport-card-content {
+			padding: 1.5rem;
+		}
+		
+		.sport-card h3 {
+			color: #667eea;
+			margin-bottom: 0.5rem;
+		}
+		
+		.sport-card p {
+			color: #666;
+			font-size: 0.9rem;
+			margin-bottom: 1rem;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<div class="banner">
+		<h1>Các Môn Thể Thao</h1>
+		<p>Trường THPT Vĩnh Trạch</p>
+	</div>
+	<nav class="tabs-nav">
+		<ul class="tabs-list">
+			<li><a href="index.html" class="tab-link active">Trang chủ</a></li>
+			<li><a href="the_thao.html" class="tab-link">Chi tiết môn thể thao</a></li>
+			<li><a href="dang_ki.html" class="tab-link">Đăng ký tham gia</a></li>
+			<li><a href="nghe_thuat.html" class="tab-link">CLB Nghệ thuật</a></li>
+		</ul>
+	</nav>
+</header>
+<main>
+	<div class="intro-section">
+		<h2>Chào mừng đến với các CLB thể thao</h2>
+		<p>Trường THPT Vĩnh Trạch tự hào giới thiệu các câu lạc bộ thể thao với những hoạt động sôi nổi, năng động và đạt được nhiều thành tích xuất sắc.</p>
+		<p style="margin-top: 1.5rem; font-weight: bold;">Các thành tích nổi bật:</p>
+		<p>03 HCV Bơi lội • 02 HCV, 06 HCB, 05 HCĐ Võ thuật • 01 giải ba Bóng đá</p>
+	</div>
+	
+	<div class="video-section">
+		<h2>Video Giới Thiệu Về Thể Thao</h2>
+		<div class="video-container">
+			<!-- HƯỚNG DẪN: Thay đổi src="videos/thethao.mp4" bằng đường dẫn video của bạn -->
+			<!-- Định dạng hỗ trợ: .mp4, .webm, .ogg -->
+			<!-- Ví dụ: src="videos/thethao.mp4" hoặc src="videos/demovideo.mp4" -->
+			<video width="100%" height="auto" controls>
+				<source src="videos/thethao.mp4" type="video/mp4">
+				<div class="video-placeholder">
+					<strong>📹 Video Chưa Được Tải</strong>
+					<p>Vui lòng tải video thể thao vào thư mục <strong>videos/</strong> và đặt tên là <strong>thethao.mp4</strong></p>
+					<p style="font-size: 0.85rem; margin-top: 0.5rem;">Hoặc chỉnh sửa src="" để trỏ đến đường dẫn video của bạn</p>
+				</div>
+			</video>
+		</div>
+		<p>🎬 Xem video này để hiểu thêm về các hoạt động thể thao và lợi ích của việc tham gia các câu lạc bộ</p>
+	</div>
+	
+	<div class="sports-grid">
+		<div class="sport-card">
+			<img src="images/bong_da.png" alt="Bóng đá">
+			<div class="sport-card-content">
+				<h3>Bóng Đá</h3>
+				<p>Môn thể thao vua, rèn luyện tinh thần đồng đội và kỷ luật.</p>
+				<a href="the_thao.html#bong-da" style="color: #667eea; text-decoration: none;">Xem chi tiết →</a>
+			</div>
+		</div>
+		
+		<div class="sport-card">
+			<img src="images/bong_chuyen.png" alt="Bóng chuyền">
+			<div class="sport-card-content">
+				<h3>Bóng Chuyền</h3>
+				<p>Phát triển sự nhanh nhẹn, khéo léo và tinh thần đoàn kết.</p>
+				<a href="the_thao.html#bong-chuyen" style="color: #667eea; text-decoration: none;">Xem chi tiết →</a>
+			</div>
+		</div>
+		
+		<div class="sport-card">
+			<img src="images/bong_ro.png" alt="Bóng rổ">
+			<div class="sport-card-content">
+				<h3>Bóng Rổ</h3>
+				<p>Hoạt động năng động, rèn luyện kỹ năng làm việc nhóm.</p>
+				<a href="the_thao.html#bong-ro" style="color: #667eea; text-decoration: none;">Xem chi tiết →</a>
+			</div>
+		</div>
+		
+		<div class="sport-card">
+			<img src="images/boi_loi.png" alt="Bơi lội">
+			<div class="sport-card-content">
+				<h3>Bơi Lội</h3>
+				<p>Rèn luyện sức khỏe và kỹ năng sinh tồn quan trọng.</p>
+				<a href="the_thao.html#boi-loi" style="color: #667eea; text-decoration: none;">Xem chi tiết →</a>
+			</div>
+		</div>
+		
+		<div class="sport-card">
+			<img src="images/vovinam.png" alt="Võ thuật">
+			<div class="sport-card-content">
+				<h3>Võ Thuật</h3>
+				<p>Rèn luyện thể chất, tinh thần kiên cường và tính kỷ luật.</p>
+				<a href="the_thao.html#vo-thuat" style="color: #667eea; text-decoration: none;">Xem chi tiết →</a>
+			</div>
+		</div>
+		
+		<div class="sport-card">
+			<img src="images/cac_clb.png" alt="Cầu lông">
+			<div class="sport-card-content">
+				<h3>Cầu Lông</h3>
+				<p>Phát triển kỹ năng và sự linh hoạt trong chơi thể thao.</p>
+				<a href="the_thao.html" style="color: #667eea; text-decoration: none;">Xem chi tiết →</a>
+			</div>
+		</div>
+	</div>
+</main>
+<footer>
+	<div class="row">
+		<div>
+			<p>📞 Liên lạc</p>
+			<ul>
+				<li>Điện thoại: <strong>0987654321</strong></li>
+				<li><a href="index.html" class="link">Các Môn Thể Thao - THPT Vĩnh Trạch</a></li>
+				<li><a href="dang_ki.html" class="link">Biểu mẫu đăng ký</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>🏆 Khám phá</p>
+			<ul>
+				<li><a href="the_thao.html" class="link">Chi tiết các môn thể thao</a></li>
+				<li><a href="dang_ki.html" class="link">Đăng ký tham gia</a></li>
+				<li><a href="nghe_thuat.html" class="link">CLB Nghệ thuật</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>ℹ️ Thông tin</p>
+			<ul>
+				<li>Trường: <strong>THPT Vĩnh Trạch</strong></li>
+				<li>Năm thành lập: <strong>2001
+				</strong></li>
+				<li>Các CLB hoạt động năng nổ</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer-divider"></div>
+	<div class="footer-bottom">
+		<p style="margin: 0; font-weight: normal;">© 2024-2026 Trường THPT Vĩnh Trạch. Tất cả các quyền được bảo lưu.</p>
+	</div>
+</footer>
+</body>
+</html>
